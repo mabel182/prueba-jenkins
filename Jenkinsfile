@@ -30,6 +30,7 @@ pipeline {
         stage('Clean Workspace') {
             steps {     
                 cleanWs()
+                slackSend channel: '#builds', color: 'good', message: 'Finish job'
             }           
         }
     }
