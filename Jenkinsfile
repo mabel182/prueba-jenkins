@@ -1,7 +1,8 @@
 pipeline {
     agent any
-
+            
     stages {
+        slackSend channel: '#builds', color: '#439FE0', message: 'Start job'
         stage('Build') {
             steps {
                 echo 'TODO: build'
