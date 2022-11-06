@@ -23,9 +23,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo 'TODO: run'
-                sh 'nohup bash ./mvnw spring-boot:run &'      
-                cleanWS()
-                
+                sh 'nohup bash ./mvnw spring-boot:run &'                      
             }           
         }
         stage('Clean Workspace') {
