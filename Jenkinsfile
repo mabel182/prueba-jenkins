@@ -2,9 +2,9 @@ pipeline {
     agent any
             
     stages {
-        slackSend channel: '#builds', color: '#439FE0', message: 'Start job'
         stage('Build') {
             steps {
+                slackSend channel: '#builds', color: 'good', message: 'Start job'
                 echo 'TODO: build'
                 sh './mvnw clean compile -e'
             }
