@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                slackSend failOnError: true, message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"`
+                slackSend failOnError: true, message: "Build Started: ${env.JOB_NAME} ${env.BUILD_NUMBER}"
                 echo 'TODO: build'
                 sh './mvnw clean compile -e'
             }
